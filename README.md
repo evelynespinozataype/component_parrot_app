@@ -22,7 +22,7 @@ sudo reboot
 
 Raspberry-screen
 ================
-IP 192.168.0.158
+IP Lab 192.168.0.158
 gateway 192.168.0.1
 255.255.255.0
 
