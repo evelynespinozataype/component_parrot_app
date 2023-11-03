@@ -24,17 +24,22 @@ sio.emit('join_component_parrot', parrot_flag, namespace ='/remote')
 # Function ECG to send the Flag of emotional state in HeartRate
 def sendValueToAquarela(parrot_flag):
     parrot_flag = 1  # happy=1, sad=0
-    sio.emit('join_component_parrot', parrot_flag)
+    sio.emit('join_component_parrot', parrot_flag, namespace ='/remote')
 
 @sio.on('join_component_aquarela', namespace = '/remote')
 def receiveValueToAquarela(data):
     print('Connected to AQUARELA')
-    happy_emotion(1)
+    start_parrot()
 
-@sio.on('feedback_parrot_sound')
+@sio.on('feedback_parrot_sound', namespace = '/remote')
 def receiveValueToAquarelaSound(data):
-    print('Connected to AQUARELA')
-    happy_emotion(1)
+    print('QR emotion AQUARELA',data)
+    emotion(data)
+
+@sio.on('feedback_parrot_interaction', namespace = '/remote')
+def receive_QRAquarela(data):
+    print('QR interaction Aquarela', data)
+    interaction(data)
 
 # Wait for a moment to allow the event to be sent
 #sio.sleep(2)
