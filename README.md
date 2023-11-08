@@ -55,6 +55,7 @@ managed=true
 
 Raspberry-screen
 ================
+IP Casa 192.168.15.15
 IP Lab 192.168.0.158
 gateway 192.168.0.1
 255.255.255.0
@@ -95,8 +96,9 @@ Intervalo IP
 192.168.1.2 ~ 192.168.1.11
 gateway 192.168.0.1
 
-
-
+File permisssion Ubuntu
+========================
+sudo chmod -R 777 /directory/
 
 
 
