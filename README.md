@@ -102,3 +102,15 @@ sudo chmod -R 777 /directory/
 
 
 
+raspberry2
+python  3.11.2
+pip 23.0.1
+Debian 12
+
+raspberry
+python 3.9.2
+pip 20.3.4
+Debian 11
+
+
+
